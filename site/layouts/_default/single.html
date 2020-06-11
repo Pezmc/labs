@@ -1,5 +1,19 @@
-{{ define "main" }} {{ $section := .Site.GetPage "section" .Section }}
+{{ define "main" }}
+<a href="{{ .Site.BaseURL }}">&larr; Back</a>
 <article class="content">
-  <main>{{- .Content -}}</main>
+  <h1 id="title">{{ .Title }}</h1>
+  <nav>
+  	See it
+  	{{ if .Params.link}}
+  		<a href="{{ .Params.link }}">Live</a>
+  	{{ end }}
+  	{{ if .Params.Github }}
+  		{{ cond .Params.link "-" "" }} 
+  		on <a href="{{ .Params.github }}">GitHub</a>
+  	{{ end }}
+  </nav>
+  <main>
+  	{{- .Content -}}
+  </main>
 </article>
 {{ end }}

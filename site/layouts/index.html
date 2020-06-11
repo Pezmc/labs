@@ -1,9 +1,23 @@
 {{ define "main" }}
 
-<h1>Hugo with Webpack, Sass, and PostCSS</h1>
+<h1>Pez's Labs</h1>
 
-<h3>Hooray 🎉 - you've built this with <a href="https://github.com/netlify/victor-hugo">Victor-Hugo</a>!</h3>
+<h3>A collection of things I've built</h3>
 
-<a href="{{ "/tech" | relURL }}">Check out the tech</a>
+<p>
+  I occasionally make things in my spare time! Here's curated list.
+  <br >
+  The majority (and some that are missing) can also be found on my
+  <a href="https://github.com/pezmc/">Github</a>!
+</p>
+
+<ul>
+  {{ range .Pages }}
+  <li>
+    <a href="{{ cond (gt (len .Content) 0) .Permalink .Params.link }}">{{.Title}}</a>
+	  {{if .Params.summary}} - {{.Params.Summary}}{{end}}</a>
+  </li>
+  {{ end }}
+</ul>
 
 {{ end }}
