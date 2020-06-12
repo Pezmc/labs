@@ -14,7 +14,7 @@
 <ul>
   {{ range .Pages }}
   <li>
-    <a href="{{ cond (gt (len .Content) 0) .Permalink .Params.link }}">{{.Title}}</a>
+    <a href="{{ cond (gt (len .Content) 0) .Permalink (cond .Params.link .Params.link .Params.github  ) }}">{{.Title}}</a>
 	  {{if .Params.summary}} - {{.Params.Summary}}{{end}}</a>
   </li>
   {{ end }}
