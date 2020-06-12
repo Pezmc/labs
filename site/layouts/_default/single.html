@@ -3,17 +3,14 @@
 <article class="content">
   <h1 id="title">{{ .Title }}</h1>
   <nav>
-  	See it
-  	{{ if .Params.link}}
-  		<a href="{{ .Params.link }}">Live</a>
-  	{{ end }}
-  	{{ if .Params.Github }}
-  		{{ cond .Params.link "-" "" }} 
-  		on <a href="{{ .Params.github }}">GitHub</a>
-  	{{ end }}
+    See it {{ if .Params.link }}
+    <a href="{{ .Params.link }}">Live</a>
+    {{ end }} {{ if .Params.Github }} {{ if .Params.link }}-{{ end }} on
+    <a href="{{ .Params.github }}">GitHub</a>
+    {{ end }}
   </nav>
   <main>
-  	{{- .Content -}}
+    {{- .Content -}}
   </main>
 </article>
 {{ end }}
