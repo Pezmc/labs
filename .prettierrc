@@ -5,5 +5,13 @@
   "semi": false,
   "singleQuote": true,
   "trailingComma": "es5",
-  "proseWrap": "always"
+  "proseWrap": "always",
+  "overrides": [
+    {
+      "files": ["*.html"],
+      "options": {
+        "parser": "go-template"
+      }
+    }
+  ]
 }
