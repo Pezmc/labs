@@ -9,3 +9,4 @@ github: https://github.com/Pezmc/AppleWatchHeartRateToHA
 
 A Swift application that integrates Apple Watch heart rate monitoring with Home Assistant, allowing you to track and visualize your heart rate data in your home automation system.
 
+Created to send the data to WLED so the room could "breath" in time with your heart rate.
