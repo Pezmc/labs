@@ -12,4 +12,4 @@ hundreds of people signing up, and active Slack community and some paid
 deposits, it fell through. I simply couldn't get enough deposits to secure a
 chalet and then COVID took over!
 
-I currently intend to try again in 2021! This is the website for that event!
+As of 2025, this project is effectively defunct, but the website is still online.

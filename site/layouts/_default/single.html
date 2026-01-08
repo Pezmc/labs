@@ -1,12 +1,27 @@
 {{ define "main" }}
 <a href="{{ .Site.BaseURL }}" class="text-blue-600 hover:text-blue-800 underline mb-6 inline-block">&larr; Back</a>
 <article class="content">
-  <h1 id="title" class="text-4xl font-bold mb-4">{{ .Title }}</h1>
+  <h1 id="title" class="text-4xl font-bold mb-4">
+    {{ .Title }}
+    {{if .Params.defunct}}<span class="ml-3 text-lg text-gray-500 font-semibold">[DEFUNCT]</span>{{end}}
+  </h1>
   <nav class="mb-6 text-gray-600">
-    See it {{ if .Params.link }}
-    <a href="{{ .Params.link }}" class="text-blue-600 hover:text-blue-800 underline">Live</a>
-    {{ end }} {{ if .Params.github }} {{ if .Params.link }} - {{ end }}on
-    <a href="{{ .Params.github }}" class="text-blue-600 hover:text-blue-800 underline">GitHub</a>
+    {{ if .Params.defunct }}
+      {{ if .Params.link }}
+        Was at: <span class="text-gray-500">{{ .Params.link }}</span>
+      {{ end }}
+      {{ if .Params.github }}
+        {{ if .Params.link }} - {{ end }}Code on
+        <a href="{{ .Params.github }}" class="text-blue-600 hover:text-blue-800 underline">GitHub</a>
+      {{ end }}
+    {{ else }}
+      {{ if or .Params.link .Params.github }}
+        See it {{ if .Params.link }}
+        <a href="{{ .Params.link }}" class="text-blue-600 hover:text-blue-800 underline">Live</a>
+        {{ end }} {{ if .Params.github }} {{ if .Params.link }} - {{ end }}on
+        <a href="{{ .Params.github }}" class="text-blue-600 hover:text-blue-800 underline">GitHub</a>
+        {{ end }}
+      {{ end }}
     {{ end }}
   </nav>
   <main class="prose prose-gray max-w-none">{{- .Content -}}</main>

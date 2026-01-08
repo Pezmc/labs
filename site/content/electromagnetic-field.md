@@ -1,6 +1,6 @@
 ---
 title: 'Electromagnetic Field'
-summary: A camping festival for people with an inquisitive mind or an interest in making things
+summary: Camping festival for people with an interest in making things
 date: 2016-07-01T00:00:00+01:00
 draft: false
 link: https://www.emfcamp.org

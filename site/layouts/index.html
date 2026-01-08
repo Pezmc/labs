@@ -20,6 +20,7 @@
       {{ range $ongoingPages }}
       <li>
         <a href="{{ cond (gt (len .Content) 0) .Permalink (cond (gt (len .Params.link) 0) .Params.link .Params.github  ) }}" class="text-blue-600 hover:text-blue-800 underline">{{.Title}}</a>
+        {{if .Params.defunct}}<span class="text-gray-500 font-semibold">[DEFUNCT]</span>{{end}}
         {{if .Params.summary}}<span class="text-gray-600"> - {{.Params.Summary}}</span>{{end}}
       </li>
       {{ end }}
@@ -51,6 +52,7 @@
         {{ range $yearGroup.Pages }}
         <li>
           <a href="{{ cond (gt (len .Content) 0) .Permalink (cond (gt (len .Params.link) 0) .Params.link .Params.github  ) }}" class="text-blue-600 hover:text-blue-800 underline">{{.Title}}</a>
+          {{if .Params.defunct}}<span class="text-xs text-gray-500 font-semibold">[DEFUNCT]</span>{{end}}
           {{if .Params.summary}}<span class="text-gray-600"> - {{.Params.Summary}}</span>{{end}}
         </li>
         {{ end }}
