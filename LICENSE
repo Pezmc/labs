@@ -1,6 +1,16 @@
-Copyright (c) 2016 Netlify <hello@netlify.com>
+# Dual License
 
-MIT License
+This repository contains two types of content with different licenses:
+
+## Code (MIT License)
+
+The following are licensed under the MIT License:
+- Build configuration files (`package.json`, `tailwind.config.js`, etc.)
+- Hugo layouts and templates (`site/layouts/`)
+- CSS and JavaScript assets (`site/assets/`, `site/static/`)
+- GitHub workflows (`.github/`)
+
+Copyright (c) 2026 pezcuckow
 
 Permission is hereby granted, free of charge, to any person obtaining
 a copy of this software and associated documentation files (the
@@ -20,3 +30,14 @@ NONINFRINGEMENT. IN NO EVENT SHALL THE AUTHORS OR COPYRIGHT HOLDERS BE
 LIABLE FOR ANY CLAIM, DAMAGES OR OTHER LIABILITY, WHETHER IN AN ACTION
 OF CONTRACT, TORT OR OTHERWISE, ARISING FROM, OUT OF OR IN CONNECTION
 WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE SOFTWARE.
+
+## Content (All Rights Reserved)
+
+The following are **NOT** licensed for reuse and remain All Rights Reserved:
+- All content files (`site/content/`)
+- Any personal descriptions, project write-ups, images, and biographical information
+
+© Pez Cuckow. All rights reserved.
+
+You may not reproduce, distribute, or create derivative works from this content
+without explicit written permission.
