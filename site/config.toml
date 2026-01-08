@@ -1,9 +1,12 @@
-baseurl = "/"
+baseURL = "/"
 languageCode = "en-us"
 languageLang = "en"
 title = "Pez's Labs"
 
 # RSS, categories and tags disabled for an easy start
-# See configuration options for more details: 
-# https://gohugo.io/getting-started/configuration/#toml-configuration
-disableKinds = ["section", "taxonomy", "taxonomyTerm", "RSS"]
+disableKinds = ["section", "taxonomy", "RSS"]
+
+# Security configuration for Netlify environment variables
+[security.funcs]
+getenv = ['^HUGO_', '^CI$', '^CONTEXT$', '^URL$', '^DEPLOY_PRIME_URL$']
+

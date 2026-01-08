@@ -1,7 +1,7 @@
 ---
 title: 'Rain Notifier'
-summary: Summary of thing
-date: 2020-15-15T19:47:22+01:00
+summary: Script which notifies you when rain hasn't happened in a while.
+date: 2020-05-15T19:47:22+01:00
 draft: false
 link: ''
 github: https://github.com/Pezmc/Rain-Notifier
