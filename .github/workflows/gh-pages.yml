@@ -37,6 +37,8 @@ jobs:
 
       - name: Build
         run: npm run build
+        env:
+          HUGO_VERSION: "0.149.2"
 
       - name: Setup Pages
         uses: actions/configure-pages@v4
