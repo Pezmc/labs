@@ -9,3 +9,4 @@ github: https://github.com/Pezmc/WhatsAppInactivityBot
 
 A bot designed to manage inactivity in WhatsApp groups, helping maintain active and engaged communities.
 
+It was created to help manage the [Leuven Social Groups](/leuven-social-groups/).
