@@ -12,6 +12,8 @@
   "author": "",
   "license": "ISC",
   "devDependencies": {
-    "hugo-bin": "^0.149.2"
+    "@tailwindcss/cli": "^4.1.18",
+    "hugo-bin": "^0.149.2",
+    "tailwindcss": "^4.1.18"
   }
 }

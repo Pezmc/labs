@@ -7,16 +7,19 @@
   <base href="{{ if getenv "CONTEXT" }}{{ cond (eq "production" (getenv "CONTEXT")) (getenv "URL") (getenv "DEPLOY_PRIME_URL") }}{{ else }}{{ $.Site.BaseURL }}{{ end }}">
   <title>{{ $.Site.Title }}</title>
 
-  <link href="{{ "css/main.css" | relURL }}" rel="stylesheet">
+  {{ with (templates.Defer (dict "key" "global")) }}
+    {{ partial "css.html" . }}
+  {{ end }}
 </head>
 
-<body>
+<body class="bg-white text-gray-900 antialiased">
+  <div class="min-h-screen max-w-3xl mx-auto px-4 py-8 md:py-16">
+    {{ block "header" . }}{{ partial "header" . }}{{end}}
 
-  {{ block "header" . }}{{ partial "header" . }}{{end}}
+    {{ block "main" . }}{{end}}
 
-  {{ block "main" . }}{{end}}
-
-  {{ block "footer" . }}{{ partial "footer" . }}{{end}}
+    {{ block "footer" . }}{{ partial "footer" . }}{{end}}
+  </div>
 
   <script src="{{ "js/main.js" | relURL }}"></script>
 </body>

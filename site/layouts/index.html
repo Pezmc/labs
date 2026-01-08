@@ -1,21 +1,21 @@
 {{ define "main" }}
 
-<h1>Pez's Labs</h1>
+<h1 class="text-4xl font-bold mb-4">Pez's Labs</h1>
 
-<h3>A collection of things I've built</h3>
+<h2 class="text-xl text-gray-600 mb-6">A collection of things I've built</h2>
 
-<p>
+<p class="mb-6 text-gray-700">
   I occasionally make things in my spare time! Here's curated list.
-  <br >
+  <br>
   The majority (and some that are missing) can also be found on my
-  <a href="https://github.com/pezmc/">Github</a>!
+  <a href="https://github.com/pezmc/" class="text-blue-600 hover:text-blue-800 underline">Github</a>!
 </p>
 
-<ul>
+<ul class="space-y-2">
   {{ range .Pages }}
   <li>
-    <a href="{{ cond (gt (len .Content) 0) .Permalink (cond (gt (len .Params.link) 0) .Params.link .Params.github  ) }}">{{.Title}}</a>
-	  {{if .Params.summary}} - {{.Params.Summary}}{{end}}</a>
+    <a href="{{ cond (gt (len .Content) 0) .Permalink (cond (gt (len .Params.link) 0) .Params.link .Params.github  ) }}" class="text-blue-600 hover:text-blue-800 underline">{{.Title}}</a>
+    {{if .Params.summary}}<span class="text-gray-600"> - {{.Params.Summary}}</span>{{end}}
   </li>
   {{ end }}
 </ul>

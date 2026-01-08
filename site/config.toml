@@ -10,3 +10,20 @@ disableKinds = ["section", "taxonomy", "RSS"]
 [security.funcs]
 getenv = ['^HUGO_', '^CI$', '^CONTEXT$', '^URL$', '^DEPLOY_PRIME_URL$']
 
+# Build configuration for Tailwind CSS
+[build]
+  [build.buildStats]
+    [build.buildStats.css]
+      source = "assets/notwatching/hugo_stats\\.json"
+      target = "css"
+    [build.buildStats.postcss]
+      source = "(postcss|tailwind)\\.config\\.js"
+      target = "css"
+  [build.module]
+    [[build.module.mounts]]
+      source = "assets"
+      target = "assets"
+    [[build.module.mounts]]
+      disableWatch = true
+      source = "hugo_stats.json"
+      target = "assets/notwatching/hugo_stats.json"

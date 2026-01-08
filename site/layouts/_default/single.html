@@ -1,14 +1,14 @@
 {{ define "main" }}
-<a href="{{ .Site.BaseURL }}">&larr; Back</a>
+<a href="{{ .Site.BaseURL }}" class="text-blue-600 hover:text-blue-800 underline mb-6 inline-block">&larr; Back</a>
 <article class="content">
-  <h1 id="title">{{ .Title }}</h1>
-  <nav>
+  <h1 id="title" class="text-4xl font-bold mb-4">{{ .Title }}</h1>
+  <nav class="mb-6 text-gray-600">
     See it {{ if .Params.link }}
-    <a href="{{ .Params.link }}">Live</a>
-    {{ end }} {{ if .Params.Github }} {{ if .Params.link }}-{{ end }} on
-    <a href="{{ .Params.github }}">GitHub</a>
+    <a href="{{ .Params.link }}" class="text-blue-600 hover:text-blue-800 underline">Live</a>
+    {{ end }} {{ if .Params.github }} {{ if .Params.link }} - {{ end }}on
+    <a href="{{ .Params.github }}" class="text-blue-600 hover:text-blue-800 underline">GitHub</a>
     {{ end }}
   </nav>
-  <main>{{- .Content -}}</main>
+  <main class="prose prose-gray max-w-none">{{- .Content -}}</main>
 </article>
 {{ end }}

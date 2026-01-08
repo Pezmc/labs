@@ -1,6 +1,8 @@
 # Hugo
 site/public/
 /resources/_gen/
+hugo_stats.json
+site/.hugo_build.lock
 
 # Node
 node_modules/
