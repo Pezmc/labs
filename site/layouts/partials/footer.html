@@ -1,0 +1,11 @@
+<footer class="mt-12 pt-8 border-t border-gray-200 text-sm text-gray-600">
+  <p>
+    More about me: <a href="https://pezcuckow.com" class="text-blue-600 hover:text-blue-800 underline">pezcuckow.com</a>
+    {{ if .Site.Params.github }}
+      | <a href="{{ .Site.Params.github }}" class="text-blue-600 hover:text-blue-800 underline">GitHub</a>
+    {{ else }}
+      | <a href="https://github.com/pezmc" class="text-blue-600 hover:text-blue-800 underline">GitHub</a>
+    {{ end }}
+  </p>
+</footer>
+

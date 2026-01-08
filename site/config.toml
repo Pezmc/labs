@@ -3,6 +3,9 @@ languageCode = "en-us"
 languageLang = "en"
 title = "Pez's Labs"
 
+[params]
+github = "https://github.com/pezmc"
+
 # RSS, categories and tags disabled for an easy start
 disableKinds = ["section", "taxonomy", "RSS"]
 
