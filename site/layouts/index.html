@@ -2,22 +2,63 @@
 
 <h1 class="text-4xl font-bold mb-4">Pez's Labs</h1>
 
-<h2 class="text-xl text-gray-600 mb-6">A collection of things I've built</h2>
-
-<p class="mb-6 text-gray-700">
-  I occasionally make things in my spare time! Here's curated list.
+<p class="mb-8 text-gray-700 leading-relaxed">
+  An archive of random projects, experiments, and things I've built or have worked on over the years.
   <br>
-  The majority (and some that are missing) can also be found on my
-  <a href="https://github.com/pezmc/" class="text-blue-600 hover:text-blue-800 underline">Github</a>!
+  Most projects (and many that aren't listed here) can also be found on my
+  <a href="https://github.com/pezmc/" class="text-blue-600 hover:text-blue-800 underline">GitHub</a>.
 </p>
 
-<ul class="space-y-2">
-  {{ range .Pages }}
-  <li>
-    <a href="{{ cond (gt (len .Content) 0) .Permalink (cond (gt (len .Params.link) 0) .Params.link .Params.github  ) }}" class="text-blue-600 hover:text-blue-800 underline">{{.Title}}</a>
-    {{if .Params.summary}}<span class="text-gray-600"> - {{.Params.Summary}}</span>{{end}}
-  </li>
+{{ $allPages := .Pages }}
+{{ $ongoingPages := where $allPages ".Params.ongoing" true }}
+{{ $datedPages := where $allPages ".Params.ongoing" "!=" true }}
+
+{{ if $ongoingPages }}
+  <div class="mb-12">
+    <h2 class="text-3xl font-bold mb-4 text-gray-900 border-b-2 border-gray-300 pb-2">Ongoing</h2>
+    <ul class="space-y-2 ml-4">
+      {{ range $ongoingPages }}
+      <li>
+        <a href="{{ cond (gt (len .Content) 0) .Permalink (cond (gt (len .Params.link) 0) .Params.link .Params.github  ) }}" class="text-blue-600 hover:text-blue-800 underline">{{.Title}}</a>
+        {{if .Params.summary}}<span class="text-gray-600"> - {{.Params.Summary}}</span>{{end}}
+      </li>
+      {{ end }}
+    </ul>
+  </div>
+{{ end }}
+
+{{ $pages := $datedPages.ByDate.Reverse }}
+{{ $grouped := $pages.GroupByDate "2006" }}
+{{ $currentYear := now.Year }}
+{{ $oldestYear := $currentYear }}
+{{ $yearMap := dict }}
+{{ range $grouped }}
+  {{ $year := int .Key }}
+  {{ $yearMap = merge $yearMap (dict .Key .) }}
+  {{ if lt $year $oldestYear }}
+    {{ $oldestYear = $year }}
   {{ end }}
-</ul>
+{{ end }}
+
+{{ range seq $currentYear -1 $oldestYear }}
+  {{ $year := . }}
+  {{ $yearKey := printf "%d" $year }}
+  {{ $yearGroup := index $yearMap $yearKey }}
+  <div class="mb-12">
+    <h2 class="text-3xl font-bold mb-4 text-gray-900 border-b-2 border-gray-300 pb-2">{{ $year }}</h2>
+    {{ if $yearGroup }}
+      <ul class="space-y-2 ml-4">
+        {{ range $yearGroup.Pages }}
+        <li>
+          <a href="{{ cond (gt (len .Content) 0) .Permalink (cond (gt (len .Params.link) 0) .Params.link .Params.github  ) }}" class="text-blue-600 hover:text-blue-800 underline">{{.Title}}</a>
+          {{if .Params.summary}}<span class="text-gray-600"> - {{.Params.Summary}}</span>{{end}}
+        </li>
+        {{ end }}
+      </ul>
+    {{ else }}
+      <p class="text-gray-500 italic ml-4">Nothing here yet.</p>
+    {{ end }}
+  </div>
+{{ end }}
 
 {{ end }}
