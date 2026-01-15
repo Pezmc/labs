@@ -1,6 +1,6 @@
 ---
 title: 'Leuven Coworking Cafes'
-summary: A filterable directory of laptop-friendly cafés and coworking spots in Leuven
+summary: A filterable directory of laptop-friendly cafés and coworking spots
 date: 2026-01-08T00:00:00+01:00
 draft: false
 link: https://coworking.pez.io/
