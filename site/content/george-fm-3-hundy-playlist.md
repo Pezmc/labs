@@ -106,11 +106,3 @@ Whatever your favourite drum and bass sub-genre, the 3 Hundy has something for e
 8.	Original Nuttah 25 (feat. IRAH) [Chase & Status Remix] — UK Apache & Shy FX
 9.	NO SURRENDER (No Retreat) — SOTA & Pirapus
 10.	No Problem — Chase & Status
-
-
-- Touch by Hybrid Minds
-- Bunker Culture Shock
-- Takeover Lee Mvthews
-- Touch again
-- Down Under - Luude
-- 
