@@ -14,17 +14,16 @@ The community serves as a catch-all for social groups, with next to no impact on
 
 - Hiking - regular weekend (and sometimes weekday) hikes
 - Café Co-Working - weekly co-work/study meet-ups
-- Photography - group outings and lessons
+- Cooking Club - sharing recipes and arranging potlucks
 - Ultimate Frisbee - regular beginner-friendly games
 - Board Games - ad-hoc board game events
 - Handball - weekly beginner-friendly trainings
-- Live Music - checking out cool musicians and live venues in Belgium and beyond
+- Live Music - checking out musicians and live venues in Belgium and beyond
 - Badminton - for badminton lovers at all levels
+- Cycling - group rides and bike nerding
 - Climbing - for climbing enthusiasts
-- Travel Buddies - organizing day trips and vacations
-- Scavenger Hunt - team-based interactive search games across Leuven
 
-**[Request to Join](https://tally.so/r/obRlrx)** - Fill in a short form and I'll send you an invite via WhatsApp.
+**[Request to Join](https://tally.so/r/obRlrx)** - Fill in a short form and one of the admins will send you an invite via WhatsApp.
 
 Founded and helped sculpt out the group, resolve conflict, and help people host events. The community emphasizes respect, inclusivity, and a zero-tolerance policy for harassment or discrimination.
 
