@@ -1,11 +1,16 @@
 ---
 title: 'Random Referral Codes'
-summary: A quick random referral code sharing tool
-date: 2023-09-19T00:00:00+01:00
+summary: Weighted random referral code sharing tool for Tesla owners
+date: 2019-07-06T19:40:49+01:00
 draft: false
 link: ''
 github: https://github.com/Pezmc/Referral-Codes
+defunct: true
 ---
 
-A tool for quickly sharing random referral codes, helping people discover and use referral codes for various services.
+Put together for the
+[Tesla Owner Group UK](https://www.facebook.com/groups/teslaownersuk/) team, to
+make sharing of referral codes fairer (during the Model 3 launch).
 
+Allows owners to add their own referral code, and potential owners to get a
+random one (which is weighted based on how often it's been seen).
